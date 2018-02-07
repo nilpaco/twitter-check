@@ -1,0 +1,72 @@
+.container {
+    height: 100%;
+    position: relative;
+    form {
+        display: flex;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        height: 100%;
+        .input-container {
+            position: relative;
+            display: inline-block;
+            margin: 0 auto;
+            &.value img {
+                opacity: 1;
+            }
+            input {
+                font-size: 20px;
+                display: block;
+                color: #000000;
+                height: 64px;
+                border-radius: 50px;
+                -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+                -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+                box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+                border: none;
+                width: 300px;
+                padding-left: 70px;
+                padding-right: 70px;
+                -webkit-transition: all 0.30s ease-in-out;
+                -moz-transition: all 0.30s ease-in-out;
+                -ms-transition: all 0.30s ease-in-out;
+                -o-transition: all 0.30s ease-in-out;              
+                &::placeholder {
+                    color: #cbcbcb;
+                    font-weight: 200;
+                }
+                &:focus {
+                    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                    outline: none;           
+                }
+            }
+            img {
+                opacity: .5;
+                position: absolute;
+                padding: 10px;
+                width: 36px;
+                height: 36px;
+                &.left-icon {
+                    left: 10px;
+                    top: 5px;    
+                }
+                &.right-icon {
+                    right: 10px;
+                    top: 5px;
+                    cursor: pointer;
+                }
+            }
+        }
+    } 
+    &.error {
+        background-color: #be1e2d;
+        transition: background-color 400ms linear;
+    }
+    &.checked {
+        background-color: #39b54a;
+        transition: background-color 400ms linear;
+    }
+}
